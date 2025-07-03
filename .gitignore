@@ -1,0 +1,19 @@
+# Ignore bin, obj and Visual Studio folders
+bin/
+obj/
+.vs/
+
+# Ignore build outputs
+*.exe
+*.dll
+*.pdb
+*.cache
+*.json
+*.txt
+
+# Ignore user-specific files
+*.user
+*.suo
+
+# Ignore static assets from build
+**/staticwebassets*
