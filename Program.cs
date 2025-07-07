@@ -12,7 +12,7 @@ builder.Services.AddAuthentication("BasicAuthentication")
 
 builder.Services.AddAuthorization();
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllers();
 builder.Services.AddCors(options =>
@@ -21,7 +21,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy.WithOrigins(
-                "https://cadastro-clientes-front-rnh9.vercel.app/"
+                "https://cadastro-clientes-front-rnh9.vercel.app"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
