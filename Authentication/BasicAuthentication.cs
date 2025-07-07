@@ -31,7 +31,7 @@ public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSc
         var password = credentials[1];
 
         // Verifique o nome de usuário e senha (aqui vamos apenas aceitar "admin" e "password" como exemplo)
-        if (username != "admin" || password != "password")
+        if (username != "18tiago" || password != "teste0171")
             return Task.FromResult(AuthenticateResult.Fail("Invalid Username or Password"));
 
         var claims = new[] {
