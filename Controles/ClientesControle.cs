@@ -21,7 +21,7 @@ namespace CadastroClientesAPI.Controllers
         public async Task<IActionResult> CreateCliente([FromBody] Cliente cliente)
         {
             if (string.IsNullOrEmpty(cliente.Nome) || string.IsNullOrEmpty(cliente.CPF) ||
-                cliente.DataNascimento == default || string.IsNullOrEmpty(cliente.NomeMae))
+                cliente.DataNascimento == default || string.IsNullOrEmpty(cliente.NomeMae) || string.IsNullOrEmpty(cliente.Telefone) || string.IsNullOrEmpty(cliente.Endereco) || string.IsNullOrEmpty(cliente.Email))
             {
                 return BadRequest("All fields are required.");
             }
