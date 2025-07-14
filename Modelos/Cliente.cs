@@ -17,7 +17,13 @@ namespace CadastroClientesAPI.Models
 		[Required]
 		public DateTime DataNascimento { get; set; }
 		[Required]
-		public string NomeMae {  get; set; }
+		public string NomeMae { get; set; }
+		[Required]
+		public string Telefone { get; set; }
+		[Required]	
+		public string Endereco { get; set; }
+		[Required]
+		public string Email { get; set; }
 
 	}
 }
