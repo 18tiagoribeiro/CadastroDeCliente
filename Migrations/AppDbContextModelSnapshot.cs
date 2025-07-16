@@ -37,11 +37,23 @@ namespace CadastroClientesAPI.Migrations
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Endereco")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("NomeMae")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Telefone")
                         .IsRequired()
                         .HasColumnType("text");
 

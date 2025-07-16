@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CadastroClientesAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250714192742_Inicial")]
+    [Migration("20250716151424_Inicial")]
     partial class Inicial
     {
         /// <inheritdoc />
@@ -40,11 +40,23 @@ namespace CadastroClientesAPI.Migrations
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Endereco")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("NomeMae")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Telefone")
                         .IsRequired()
                         .HasColumnType("text");
 

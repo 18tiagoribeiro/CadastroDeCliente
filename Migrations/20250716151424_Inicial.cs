@@ -21,7 +21,10 @@ namespace CadastroClientesAPI.Migrations
                     Nome = table.Column<string>(type: "text", nullable: false),
                     CPF = table.Column<string>(type: "text", nullable: false),
                     DataNascimento = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    NomeMae = table.Column<string>(type: "text", nullable: false)
+                    NomeMae = table.Column<string>(type: "text", nullable: false),
+                    Telefone = table.Column<string>(type: "text", nullable: false),
+                    Endereco = table.Column<string>(type: "text", nullable: false),
+                    Email = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
