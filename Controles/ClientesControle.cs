@@ -32,6 +32,9 @@ namespace CadastroClientesAPI.Controllers
                 return BadRequest("A client with this CPF already exists.");
             }
 
+            //mudança no formato da hora
+            cliente.DataNascimento = cliente.DataNascimento.Date;
+
             _context.Clientes.Add(cliente);
             await _context.SaveChangesAsync();
 
