@@ -28,6 +28,12 @@ builder.Services.AddCors(options =>
         });
 });
 
+builder.Services.AddControllers().AddJsonOptions(opt =>
+{
+    opt.JsonSerializerOptions.Converters.Add(new DateOnlyJsonConverter());
+});
+
+
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
