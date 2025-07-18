@@ -33,7 +33,7 @@ namespace CadastroClientesAPI.Controllers
             }
 
             //mudança no formato da hora
-            cliente.DataNascimento = cliente.DataNascimento.Date;
+            //cliente.DataNascimento = cliente.DataNascimento.Date;
 
             _context.Clientes.Add(cliente);
             await _context.SaveChangesAsync();
